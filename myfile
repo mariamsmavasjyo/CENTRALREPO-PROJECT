@@ -1,0 +1,48 @@
+1st line from hyd 
+Hi, thanks for your interest in the project! We, the development team, welcome all pull requests from developers of any skill level.
+
+Who are we? Jens H. Nielsen, William H.P Nielsen, Mikhail Astafev and Trevor Morgan are the current maintainers, or core developers, of QCoDeS. This team is further supported by the smart and talented volunteers who contribute code to this open source project.
+
+Need help? While we strive for perfect documentation, we recommend any help requests be put through our GitHub Discussion Page. We strongly encourage you to open a new thread detailing your problem so that the team and community can provide a solution.
+
+Contents
+
+Announcements
+QCoDeS Community Drivers
+Bugs reports
+Feature requests
+Clever usage
+Development
+Setup
+Running Tests
+New code and testing
+A note on committing and pushing (if you are not really familiar with git).
+Coding Style
+Pull requests
+Automatic Testing (CI)
+Required checks
+Optional checks
+Documenting QCoDeS
+Announcements
+New releases of QCoDeS and other bigger news will be announced in Github Discussions under the Announcements category.
+
+QCoDeS Community Drivers
+The QCoDeS instrument drivers that are not supported by the QCoDeS developers should be pushed to the dedicated repository in GitHub:
+
+https://github.com/QCoDeS/Qcodes_contrib_drivers
+
+These drivers are supported on a best effort basis by the developers of the individual drivers.
+
+Note that, any pull request to the main QCoDeS repository concerning unsupported drivers will not be reviewed and/or merged with the QCoDeS core.
+
+Bugs reports
+We use github's issues. If your problem is not yet addressed in the current issues, please open a new issue.
+
+The github GUI will show you a template for bug reports. Please fill in the relevant sections of the template and delete the sections that do not apply to your bug. Please include a reproducible example of this bug with your report so that we can investigate it. By writing a good report, we are better able to help you and everyone in the QCoDeS community.
+
+Feature requests
+Have an idea about future directions to go with Qcodes? Visions of a data-utopia that would take more than a few weeks to add or might change some core ideas in the package? Please use "Ideas" section in Github Discussions. We will pick the long-term or discussion labels.
+
+If somebody is assigned to an issue it means that somebody is working on it.
+
+
