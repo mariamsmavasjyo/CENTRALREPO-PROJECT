@@ -1,0 +1,172 @@
+In our case, we have two branches one is the default branch called “main” and the other branch named “dev” and this is how our git repo looks before merging. Here git finds the common base, creates a new merge commit, and merged them.
+
+git after merge 
+Git – Merge
+
+A git merge operation is performed by running the below command. When we perform merging, git always merges with the current branch from where we are performing the operation(in our case it is “main”). By this, the branch being merged is not affected.
+
+ "git merge <name of the branch to be merged (in our case it is "dev")>". 
+Merging Types
+In Git, there are two primary types of merging. There are.
+
+Fast-forward merging.
+Three-way merging.
+1. Fast-Forward Merging
+Fast forward merge happens when the tip of the current branch (“dev” in our case) is a direct ancestor of the target branch (“main” in our case). Here instead of actually merging the two branches git simply moves the current branch tip up to the target branch tip. Fast-forward merge is not possible if the branches have diverged. Then we need a 3-way merge which uses a dedicated commit to merge two histories or you can say branches.
+
+git forwarded merging. 
+Git – Merge
+
+2. Three-Way Merging
+When the base branch has changed since the branch was first created, this kind of merging takes place. Git in this situation generates a fresh merging commit that incorporates the modifications from both branches. Git compares the modifications made to both branches with those made to the base branch using a three-way merge process. Following that, it integrates both sets of changes into a single new commit.
+
+git three-way merging 
+Git – Merge
+
+Git also supports some other types of merging like recursive and octopus margin. With the help of a single merge commit “octopus merging” can merge multiple branches at once. “Recursive merging” is similar to three-way merging but it can handle some more complex merge operations than the three-way merging.
+
+Essential Commands To Perform Git Merging 
+First and foremost, we need a git repository with at least two branches in it in order to perform the git merge procedure. Any git repo has one default branch when it is first created (by using the “git init” command). So, we must first make another branch. To do this, we must execute the command below.
+
+git branch <name of the branch you wanna create>
+In our case the name of the branch is dev.
+
+git status
+Git – Merge
+
+Here we have created two branches one is the default “main” and another is “dev”. We have also committed two changes in two branches.
+
+Now to merge these two branches first we have to follow the below steps
+
+checkout to the target branch to merge the current branch
+then run the below command
+git merge <name of the current branch>
+git-merge-dev
+Git – Merge
+
+Now we have successfully merged our two branches and as you can see we have the same changes or you can say commits in both branches.
+
+Steps To Merge a Branch
+To ensure that the merging process goes smoothly we need to follow a series of steps for merging which involves resolving any conflicts that we may face. Below are the basic steps involved.
+
+Step 1: Creating a new branch.
+
+Create a new branch from the remote repository branch which you want to merge. If errors are faced while merging we can go back to the previous version immediately.
+
+Step 2: Make sure always latest changes are pulled.
+
+Always make sure before merging the latest changes that the latest changes are pulled from both branches like the master and the branch you want to merge.
+
+Step 3: Resolving the merge conflicts.
+
+While merging the branches it is possible that some merge conflicts will be raised then git will prompt you to resolve the merge conflicts. If any merge conflicts are not raised then git will automatically merge the branches. 
+
+Step 4: Merged code needs to be tested.
+
+It is essential to test the merged code and we have to make sure that the code doesn’t have any bugs and it is working properly. To test the code we do it automatically or manually.
+
+Step 5: Commit the merged code.
+
+Once completing of merging the code if you are satisfied with the work, Know it’s time to commit the new changes of code into the new branch.
+
+Step 6: Push the merged branch.
+
+Lastly, make the new branch accessible to other team members by pushing it to the repository.
+
+In conclusion, pulling the most recent changes, resolving conflicts, testing the merged code, committing the changes, and pushing the new branch are the essential phases in the Git merge preparation process. The merging procedure in Git can be streamlined and effective with careful planning and attention to detail.
+
+How To Resolve Merge Conflicts?
+While merging the two branches if changes are made to two different branches then git will not merge automatically it prompts the user to resolve the merge conflicts manually. Below are the steps to resolve the merge conflicts in git: 
+
+Step 1: Identify the conflict files.
+
+Git will automatically display a message by indicating the file to be resolved from merge conflicts. You have to resolve the conflicts manually.
+
+Step 2: Open the conflict files.
+
+Open the merge conflict files by using editors whatever you are convenient with like (IDE). After opening we can conflict markers as shown below it will indicate where the conflicts are located.
+
+Conflict markers
+
+(<<<<<<<, =======, and >>>>>>>) 
+Step 3: Resolve the conflicts.
+
+Remove the unnecessary changes after examining them carefully and keep the changes that are more important.
+
+Step 4: Moving to the staging.
+
+Use the git add command to add the updated files to the staging area after the conflicts have been resolved.
+
+Step 5: Commit and Push the changes
+
+After resolving conflicts commit the changes by using the below command.Including the message which gives information about changes made while resolving the conflicts.
+
+git commit -m "message"
+Push the changes made to the remote repository by using. Below command.
+
+git push 
+Where other developers can access the code. And perform any changes that are required.
+
+After resolving the conflicts, it is crucial to carefully analyze and test the merged code to make sure that the modifications are functioning as intended and that no new problems have been introduced. These procedures can help developers resolve merge disputes in Git and maintain a dependable and stable codebase.
+
+Git Merge vs Rebase
+Git Merge	Git Rebase
+Git merge will create a new commit by combining the changes in one branch with another branch.	Git rebase will integrate one branch commits to another branch by this the commit history will be rewritten.
+The commit history of all the branches with which you have merged will be stored. 
+
+A new commit will be created when you integrate the changes. 
+It is useful for incorporating changes from a feature branch or integrating changes from multiple developers.
+ 	Rebase is also helpful for resolving conflicts early and maintaining a more streamlined and cohesive commit history.
+Frequently Asked Questions 
+1. What does git clean do?
+Answer: 
+
+It will delete untracked files in git working directory.
+
+ run the rm command with the -f and -r switches to recursively remove the .git folder and all of the files and folders it contains.
+
+2. How to remove all git data?
+Answer: 
+
+You can use rm command with the options like -f and -r to remove all the git data.
+
+
+Three 90 Challenge is back on popular demand! After processing refunds worth INR 1CR+, we are back with the offer if you missed it the first time. Get 90% course fee refund in 90 days. Avail now!
+Want to be a Software Developer or a Working Professional looking to enhance your Software Development Skills? Then, master the concepts of Full-Stack Development. Our Full Stack Development - React and Node.js Course will help you achieve this quickly. Learn everything from Front-End to Back-End Development with hands-on Projects and real-world examples. This course enables you to build scalable, efficient, dynamic web applications that stand out. Ready to become an expert in Full-Stack? Enroll Now and Start Creating the Future!
+
+
+author
+subrata03cse
+ Follow
+News
+
+2
+Previous Article
+How to Fetch All Git Branches?
+Next Article
+Git-Checkout And Merge
+Read More
+Down Arrow
+Similar Reads
+Difference Between Git remote prune, Git prune and Git fetch --prune
+Git is a version control system that helps developers manage and track changes in their codebase. Among its many commands, git remote prune, git prune, and git fetch --prune are essential for maintaining a clean and organized repository. This article will explain the differences between these commands, their syntax, uses, and provide examples to il
+4 min read
+Git Merge and Merge Conflict
+Let us discuss what merging in git. Merging means combining changes from one branch into another branch. Now let's see how can we perform merging here we can see that we can see one log in the master branch. Merging Changes Now let's check out the logs in the dev branch and here we can see there are two logs in the dev branch. So now as we can see
+2 min read
+Git - git-show Command Line Utility
+Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git relies on the basis of distributed development of software where more than one developer may have access to the source code of a specific application and can modify changes to it that may be
+3 min read
+Git LFS: Managing Large Files in Git Repositories
+Git, undoubtedly one of the most popular version control systems, is widely used for managing source code in software development projects. However, one of its limitations is its handling of large files. Traditional Git repositories struggle to efficiently manage large files, leading to bloated repositories and slow performance. This is where Git L
+4 min read
+Git Subtree vs. Git Submodule
+Git Subtree and Git Submodule are both mechanisms in Git that allow you to incorporate external repositories into your own repository. They provide a way to manage dependencies and include code from other projects while keeping your repository organized and maintainable. Git Subtree: Git Subtree allows you to insert a separate repository as a subdi
+4 min read
+Difference Between Git Fetch and Git Pull
+Understanding the difference between git fetch and git pull is important for effective version control in Git. These commands are important for managing your repository and collaborating with team members. In this article, Let us look at Git Fetch and Git Pull separately with the help of an example. What is Git Fetch?The Git Fetch command is used t
+4 min read
+Difference Between Git Push Origin and Git Push Origin Master
+Understanding the diff
+
+
