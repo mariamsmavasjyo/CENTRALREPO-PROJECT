@@ -1,4 +1,11 @@
 1st line from hyd 
+2nd line from hyd 
+
+
+branches in a unified history, or to be simple you can say in a single branch.
+
+What happens is when we try to merge two branches, git takes two commit pointers and starts searching for a common base commit in those two specified bit branches. When git finds the common base commit it simply creates a “merge commit” automatically and merges each queued merge commit sequence. There is a proper merging algorithm in git, with the help of which git performs all of these operations and presents conflicts if there are any.
+
 Hi, thanks for your interest in the project! We, the development team, welcome all pull requests from developers of any skill level.
 
 Who are we? Jens H. Nielsen, William H.P Nielsen, Mikhail Astafev and Trevor Morgan are the current maintainers, or core developers, of QCoDeS. This team is further supported by the smart and talented volunteers who contribute code to this open source project.
